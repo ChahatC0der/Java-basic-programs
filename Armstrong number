@@ -1,0 +1,40 @@
+import java.lang.Math; 
+import java.util.Scanner; 
+public class javabasics{ 
+     
+    public static void CheckArmNum(int num){ 
+        int count=0, ArmNum=0, rem=0; 
+        int result=num,a = num; 
+        //for counting digits --> 
+        
+
+        while(num!=0){ 
+            num=num/10;
+            count++; 
+        } 
+        //for calculating powers --> 
+        while(a!=0){ 
+            rem = (a%10); 
+            ArmNum += Math.pow(rem,count); 
+            a=a/10;
+             
+        } 
+         
+        //final if condition to print the result --> 
+        if(ArmNum == result){ 
+            System.out.print("Entered number is an Armstrong Number"); 
+        } 
+        else{ 
+            System.out.print("Not an armstrong number"); 
+        } 
+} 
+    public static void main(String args[]){ 
+        Scanner sc = new Scanner(System.in); 
+        System.out.print("Enter num:"); 
+        int num = sc.nextInt();    
+        CheckArmNum(num); 
+         
+        
+     
+} 
+}
