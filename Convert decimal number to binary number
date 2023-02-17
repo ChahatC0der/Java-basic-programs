@@ -1,0 +1,27 @@
+import java.lang.Math; 
+import java.util.Scanner; 
+public class javabasics{ 
+    // To convert a decimal number to a binary number -->
+    public static void decimalToBinary(int num){
+        int pow=0,rem=0,binaryNo=0;
+        while(num!=1){
+           rem=num%2;
+           binaryNo=binaryNo+(rem*(int)Math.pow(10,pow));
+           pow++;
+           num=num/2;
+        }
+        
+        binaryNo=binaryNo+(num*(int)Math.pow(10,pow));
+        System.out.println(binaryNo);
+    }  
+    public static void main(String args[]){ 
+        Scanner sc = new Scanner(System.in); 
+        
+        System.out.println("Enter a decimal number");
+        int num = sc.nextInt();    
+        decimalToBinary(num); 
+         
+        
+     
+} 
+}
